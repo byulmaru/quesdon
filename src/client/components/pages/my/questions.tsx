@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
 import { APIQuestion, APIUser } from '../../../../api-interfaces';
 import { apiFetch } from '../../../api-fetch';
-import josa from '../../../josa';
+import josa from '../../../../common/josa';
 import { Title } from '../../common/title';
 import { Loading } from '../../loading';
 import { Question } from '../../question';

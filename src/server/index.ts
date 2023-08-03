@@ -10,6 +10,7 @@ import rndstr from 'rndstr';
 import apiRouter from './api';
 import { GIT_COMMIT, PORT, SECRET_KEY } from './config';
 import { User } from './db/index';
+import josa from '../common/josa';
 
 const app = new Koa();
 
@@ -47,6 +48,7 @@ router.get('/*', async (ctx: Koa.ParameterizedContext) =>
 			GIT_COMMIT,
 			user,
 			profile,
+			josa,
 			csrfToken: ctx.session.csrfToken
 		});
 });

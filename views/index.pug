@@ -11,7 +11,7 @@ html
 		- const siteName = "Quesdon@Planet"
 		if profile
 			- const title = `${profile.name}님의 ${profile.questionBoxName || '질문함'}`
-			- const description = profile.description || `${title}에요`
+			- const description = profile.description || `${josa(title, '이에요', '예요')}`
 			meta(name="twitter:card", content="summary")
 			meta(property="og:site_name", content=siteName)
 			meta(property="og:title", content=title)
