@@ -134,7 +134,7 @@ router.post('/:id/answer', async (ctx: Koa.ParameterizedContext): Promise<void|n
 		status.title = '⚠ 이 질문은 답변자가 NSFW하다고 했어요. #quesdon';
 	}
 
-	if (instanceType === 'misskey')
+	if (instanceType === 'misskey' || instanceType === 'cherrypick')
 	{
 		let visibility;
 		switch(ctx.request.body.visibility)

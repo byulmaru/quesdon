@@ -41,7 +41,7 @@ router.get('/followers', async (ctx: Koa.ParameterizedContext): Promise<never|vo
 	const instanceUrl = 'https://' + user.acct.split('@')[1];
 	const instanceType = await detectInstance(instanceUrl);
 
-	if (instanceType === 'misskey')
+	if (instanceType === 'misskey' || instanceType === 'cherrypick')
 	{
 		// misskey
 		const fetchOptions = 
